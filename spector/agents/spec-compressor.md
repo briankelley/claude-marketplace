@@ -1,7 +1,6 @@
 ---
 name: spec-compressor
 description: High-density spec compression agent for Spector. Transforms structured inventories into dense functional specifications. Orchestrated by /spector.
-model: opus
 allowed-tools: Read
 ---
 

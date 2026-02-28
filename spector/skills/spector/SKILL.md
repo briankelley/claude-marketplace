@@ -26,7 +26,6 @@ For each section (up to 5 concurrent), launch a `spec-scanner` agent via Task to
 ```
 Task(
   subagent_type="spec-scanner",
-  model="sonnet",
   prompt="Section: {section_name}\nFiles: {file_paths}\n\nProduce a structured behavioral inventory per the spec-scanner protocol."
 )
 ```
@@ -40,7 +39,6 @@ Launch **one** `spec-compressor` agent with all scanner outputs concatenated. Th
 ```
 Task(
   subagent_type="spec-compressor",
-  model="opus",
   prompt="Sections to compress:\n\n---\nSection: {section_1_name}\n{scanner_output_1}\n\n---\nSection: {section_2_name}\n{scanner_output_2}\n\n...\n\nCompress each section into a dense functional specification per the spec-compressor protocol. Match the gold-standard density. Emit each compressed section separated by a horizontal rule (---)."
 )
 ```

@@ -1,7 +1,6 @@
 ---
 name: spec-scanner
 description: Codebase behavioral inventory agent for Spector. Reads source, emits structured intermediate representation for compression. Orchestrated by /spector.
-model: sonnet
 allowed-tools: Read, Glob, Grep, Bash(wc *), Bash(find *)
 ---
 
