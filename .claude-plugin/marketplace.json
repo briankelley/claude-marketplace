@@ -1,0 +1,12 @@
+{
+  "name": "briankelley-marketplace",
+  "version": "0.1.0",
+  "plugins": [
+    {
+      "name": "spector",
+      "version": "0.1.0",
+      "description": "High-density functional spec generation from code. Sonnet captures, Opus compresses.",
+      "path": "spector/"
+    }
+  ]
+}
