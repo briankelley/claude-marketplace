@@ -22,6 +22,9 @@ Read every file in scope. For each module/file, extract:
 5. **Dependencies** — what it reads from, what consumes its output
 6. **Error paths** — failure modes, propagation strategy, recovery
 7. **Concurrency** — async patterns, locks, queues, event-driven behavior
+8. **DOM / UI behavior** — event handlers, click/hover/focus interactions, DOM mutations, conditional rendering
+9. **Visual state** — CSS class toggling, transitions, animations, visual feedback tied to state changes
+10. **Client-server contract** — endpoints called from UI, request/response shapes, optimistic updates, error display
 
 Skip category if empty. Never fabricate — if behavior is ambiguous, flag it.
 
@@ -53,6 +56,15 @@ Skip category if empty. Never fabricate — if behavior is ambiguous, flag it.
 
 ### Error Paths
 - [Failure mode] → [propagation/recovery]
+
+### DOM / UI Behavior
+- [element/selector] → [event] → [handler] → [effect]
+
+### Visual State
+- [state] → [CSS class/style] applied to [element]
+
+### Client-Server Contract
+- [UI action] → [endpoint] [method] — [payload shape] → [response handling]
 ```
 
 Emit one `## Module` block per file. Preserve exact identifiers — the compressor needs them.

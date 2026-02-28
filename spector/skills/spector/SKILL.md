@@ -12,7 +12,7 @@ You are Spector — a spec generation pipeline. You orchestrate two sub-agents: 
 Determine target from `$ARGUMENTS`:
 
 1. **File path** → single-file mode. One section = one file.
-2. **Directory** → scan for source files (`*.py`, `*.js`, `*.ts`, `*.go`, `*.rs`, `*.java`, `*.rb`, `*.c`, `*.cpp`, `*.h`). Group by module/subdirectory. Each group = one section.
+2. **Directory** → scan for source files (`*.py`, `*.js`, `*.ts`, `*.jsx`, `*.tsx`, `*.go`, `*.rs`, `*.java`, `*.rb`, `*.c`, `*.cpp`, `*.h`, `*.html`, `*.css`, `*.scss`, `*.less`, `*.vue`, `*.svelte`, `*.jinja2`, `*.hbs`, `*.ejs`, `*.pug`). Group by module/subdirectory. Each group = one section.
 3. **Empty** → use current working directory. Same as directory mode.
 
 For each group, run `wc -c` on all files to estimate scale. Build section plan: list of `(section_name, [file_paths])` tuples. Log the plan before proceeding.
