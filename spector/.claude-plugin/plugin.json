@@ -1,0 +1,5 @@
+{
+  "name": "spector",
+  "description": "High-density functional spec generation from code. Sonnet captures, Opus compresses.",
+  "version": "0.1.0"
+}
