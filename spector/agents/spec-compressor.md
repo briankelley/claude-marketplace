@@ -9,7 +9,7 @@ You compress structured behavioral inventories into functional specifications wi
 
 ## Input
 
-You receive: a scanner's structured inventory for one section, plus the gold-standard reference below.
+You receive: one or more scanner structured inventories (each labeled by section name), plus the gold-standard reference below. Process each section sequentially within this single session.
 
 ## Compression Protocol
 

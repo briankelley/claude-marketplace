@@ -33,15 +33,15 @@ Task(
 
 Collect all outputs. If a scanner fails, retry once. If it fails again, note the gap and continue.
 
-## Phase 3: Sequential Compression
+## Phase 3: Single-Session Compression
 
-For each scanner output (one at a time — cost control), launch a `spec-compressor` agent via Task tool:
+Launch **one** `spec-compressor` agent with all scanner outputs concatenated. This avoids per-agent overhead while keeping Opus usage sequential within a single context window:
 
 ```
 Task(
   subagent_type="spec-compressor",
   model="opus",
-  prompt="Section: {section_name}\n\nScanner output:\n{scanner_output}\n\nCompress into a dense functional specification per the spec-compressor protocol. Match the gold-standard density."
+  prompt="Sections to compress:\n\n---\nSection: {section_1_name}\n{scanner_output_1}\n\n---\nSection: {section_2_name}\n{scanner_output_2}\n\n...\n\nCompress each section into a dense functional specification per the spec-compressor protocol. Match the gold-standard density. Emit each compressed section separated by a horizontal rule (---)."
 )
 ```
 
