@@ -10,6 +10,13 @@
       "description": "High-density functional spec generation from code. Sonnet captures, Opus compresses.",
       "version": "0.1.0",
       "category": "development"
+    },
+    {
+      "name": "paranoid-e2e-architect",
+      "source": "./paranoid-e2e-architect",
+      "description": "Adversarial E2E test layer that hunts for unguarded destructive paths in web applications.",
+      "version": "1.0.0",
+      "category": "testing"
     }
   ]
 }
