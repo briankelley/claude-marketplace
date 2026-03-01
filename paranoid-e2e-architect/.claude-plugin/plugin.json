@@ -1,0 +1,5 @@
+{
+  "name": "paranoid-e2e-architect",
+  "description": "Adversarial E2E test layer that hunts for unguarded destructive paths in web applications. Builds write registries, fuzzes every input permutation, and enforces that no state-mutating path exists without a guard.",
+  "version": "1.0.0"
+}
