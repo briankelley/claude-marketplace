@@ -1,6 +1,12 @@
 # claude-marketplace
 
-MY Plugin marketplace for Claude Code. The agents here were a direct response to a challenge I wasn't able to solve using other methods.
+MY Plugin marketplace for Claude Code. The agents here were created from something I stumbled across by accident, wrapped as a solution.
+
+The *Spector* sub-agent came from me trying to articulate to Kimi K2.5 how a dashboard with an endless combination of settings was manipulated by an end user, why they'd want certain settings, and what rules governed whether or not the combination of settings was valid. It was one of those things where you'd look at the area of the UI and know instantly how it worked, but couldn't explain it. Kimi looked at my screenshots and the bug in the code and was able to describe it with comically dense narrative, later improved by Claude. This agent tries to extend my experience with that to an entire code base. (this one needs a little work.)
+
+The *Paranoid E2E Architect* sub-agent was borne from a frustration that Claude could generate a lot of common sense unit tests that covered 65-70% of how a complex application was supposed to work, but completely whiffed on the need for tests many developers with an eye toward excellent UX would catch. Language models are good at validating a spec was implemented and functions with the spec as a guide. If it wasn't defined in the spec, the model isn't going to manufacture it out of thin air. That's on you, the human. This sub-agent attempts to close the coverage gap between what the model *knows* needs to be tested and the mutations in an application that aren't in the spec, but a human would ID.
+
+---
 
 ## Plugins
 
@@ -51,7 +57,7 @@ See `spector/examples/config-page-iconography.md` for the gold-standard referenc
 
 ### Paranoid E2E Architect
 
-Adversarial E2E test layer that hunts for unguarded destructive paths in web applications. Builds a registry of every state-mutating operation, fuzzes every permutation of empty/default/boundary input against pre-existing data, and enforces that no write path exists without a corresponding guard. Does not verify happy paths — other tests handle those.
+Adversarial E2E test layer that hunts for unguarded destructive paths in web applications. Builds a registry of every state-mutating operation, fuzzes every permutation of empty/default/boundary input against prHomee-existing data, and enforces that no write path exists without a corresponding guard. Does not verify happy paths — other tests handle those.
 
 #### Install
 
