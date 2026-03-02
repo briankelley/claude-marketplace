@@ -1,6 +1,6 @@
 # claude-marketplace
 
-Plugin marketplace for Claude Code.
+MY Plugin marketplace for Claude Code. The agents here were a direct response to a challenge I wasn't able to solve using other methods.
 
 ## Plugins
 
